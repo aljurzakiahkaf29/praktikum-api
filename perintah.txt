@@ -1,2 +1,3 @@
 1. untuk menjalanakan server = php artisan serve
 2. membuat controller baru   = php artisan make:controller (NamaController) -r
+3. name pada form harus sama dengan di databse

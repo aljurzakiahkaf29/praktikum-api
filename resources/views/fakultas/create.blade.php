@@ -16,37 +16,18 @@
     <div class="card-body">
        <form>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="fakultas_name">Nama Fakultas</label>
+    <input type="text" class="form-control" id="fakultas_name" name="fakultas_name" placeholder="Masukkan Nama Fakultas">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
+    <label for="kode_fakultas">kode Fakultas</label>
+    <input type="text" class="form-control" id="kode_fakultas" name="kode_fakultas" placeholder="Masukkan Kode Fakultas">
     </div>
 </div>
 
+<div class="form-program">
+    <button type="submit" class="btn btn-primary">Tambah</button>
+</div>
 
 
 @endsection
