@@ -17,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
-
 Route::get('/fakultas', [FakultasController::class, 'index'])->name('fakultas.index');
-
+Route::get('/fakultas/create', [FakultasController::class, 'create'])->name('fakultas.create');
 
 
 
