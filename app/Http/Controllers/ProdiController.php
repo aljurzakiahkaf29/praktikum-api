@@ -33,7 +33,7 @@ class ProdiController extends Controller
             'nama_prodi' => 'required|max:50',
             'kode_prodi' => 'required'
         ]);
-        $prodi = Prodi :: create([
+        $prodi = Prodi::create([
             'nama_prodi' => $request->nama_prodi,
             'kode_prodi' => $request->kode_prodi
         ]);

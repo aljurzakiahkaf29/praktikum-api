@@ -22,6 +22,7 @@
                         <th>No</th>
                         <th>Nama Fakultas</th>
                         <th>Kode Fakultas</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -30,7 +31,10 @@
                         <tr>
                             <th>{{ $loop->iteration }}</th>
                             <th>{{ $item->nama_fakultas }}</th>
-                            <th>{{ $item->kode_fakultas }}</th>                       
+                            <th>{{ $item->kode_fakultas }}</th>
+                            <td>
+                                <a href="{{route ('fakultas.edit', $item->id)}} class="btn btn-primary">Edit</a>
+                            </td>                       
                         </tr>
                     @endforeach                    
                    

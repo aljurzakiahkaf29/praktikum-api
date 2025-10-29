@@ -24,6 +24,8 @@ Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::get('/fakultas', [FakultasController::class, 'index'])->name('fakultas.index');
 Route::get('/fakultas/create', [FakultasController::class, 'create'])->name('fakultas.create');
 Route::post('/fakultas/store', [FakultasController::class, 'store'])->name('fakultas.store');
+Route::get('/fakultas/edit/{id}', [FakultasController::class, 'edit'])->name('fakultas.edit');
+
 
 //Prodi
 Route::get('/prodi', [ProdiController::class, 'index'])->name('prodi.index');

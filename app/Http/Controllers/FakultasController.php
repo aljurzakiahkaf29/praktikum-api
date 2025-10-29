@@ -54,7 +54,8 @@ class FakultasController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $fakultas = Fakultas::find($id);
+        return view('fakultas.edit', compact('fakultas'));
     }
 
     /**
