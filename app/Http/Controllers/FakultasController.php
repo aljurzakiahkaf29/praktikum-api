@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Fakultas;
 use Illuminate\Http\Request;
+use Illuminate\Routing\RedirectController;
 
 class FakultasController extends Controller
 {
@@ -63,7 +64,19 @@ class FakultasController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validate = $request->validate([
+            'nama_fakultas' => 'required|max:50',
+            'kode_fakultas' => 'required'
+        ]);
+
+        $fakultas = Fakultas::findOrFail($id);
+        $fakultas->update([
+            'nama_fakultas' => $request->nama_fakultas,
+            'kode_fakultas' => $request->kode_fakultas,
+
+        ]);
+
+        return redirect()->route('fakultas.index');
     }
 
     /**
@@ -71,6 +84,8 @@ class FakultasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $fakultas = Fakultas::findOrFail($id);
+        $fakultas->delete();
+        return Redirect()->route('fakultas.index');php 
     }
 }

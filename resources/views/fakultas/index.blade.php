@@ -33,8 +33,10 @@
                             <th>{{ $item->nama_fakultas }}</th>
                             <th>{{ $item->kode_fakultas }}</th>
                             <td>
-                                <a href="{{route ('fakultas.edit', $item->id)}} class="btn btn-primary">Edit</a>
+                                <a href="{{route ('fakultas.edit', $item->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i>Edit</a>
+                                <a href="{{ route('fakultas.hapus', $item->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i>Hapus</a>
                             </td>                       
+                            
                         </tr>
                     @endforeach                    
                    
