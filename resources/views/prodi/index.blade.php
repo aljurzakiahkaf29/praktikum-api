@@ -22,15 +22,20 @@
                         <th>No</th>
                         <th>Nama Prodi</th>
                         <th>Kode Prodi</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tfoot>
                 <tbody>
                     @foreach ($prodi as $item)
                         <tr>
-                            <th>{{ $loop->iteration }}</th>
-                            <th>{{ $item->nama_prodi }}</th>
-                            <th>{{ $item->kode_prodi }}</th>                       
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $item->nama_prodi }}</td>
+                            <td>{{ $item->kode_prodi }}</td>  
+                             <td>
+                                <a href="{{route ('prodi.edit', $item->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i>Edit</a>
+                                <a href="{{ route('prodi.hapus', $item->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i>Hapus</a>
+                            </td>                   
                         </tr>
                     @endforeach                    
                    

@@ -15,6 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('nama_prodi');
             $table->string('kode_prodi');
+            $table->unsignedBigInteger('fakultas_id');
+            $table->foreign('fakultas_id')
+            ->references('id')
+            ->on('fakultas')
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+
             $table->timestamps();
         });
     }

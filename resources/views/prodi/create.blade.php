@@ -24,18 +24,34 @@
         <small class="text-danger">{{$message}}</small>
     @enderror
   </div>
+
   <div class="form-group">
-    <label for="kode_prodi">kode Prodi</label>
+    <label for="kode_prodi">Kode Prodi</label>
     <input type="text" class="form-control" id="kode_prodi" name="kode_prodi" placeholder="Masukkan Kode Prodi">
-    @error('kode_Prodi')
+    @error('kode_prodi')
         <small class="text-danger">{{$message}}</small>
     @enderror
-    </div>
-</div>
+  </div>
 
-<div class="form-program">
+
+  <div class="form-group">
+    <label for="fakultas_id">Fakultas</label>
+    <select class="form-control" name="fakultas_id" id="fakultas_id">
+
+
+        @foreach ($fakultas as $item)
+            <option value="{{ $item->id }}">{{ $item->nama_fakultas }}</option>
+        @endforeach
+        
+    </select>
+  </div>
+  <div class="form-program">
     <button type="submit" class="btn btn-primary">Tambah</button>
 </div>
+</form>
+</div>
+
+
 
 
 @endsection
