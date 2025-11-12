@@ -35,8 +35,8 @@
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Buek Akun Lu Cuu</h1>
-                                @if(session('succes'))
-                                    <div class="alert alert-succes">{{ session('success') }}</div>
+                                @if(session('success'))
+                                    <div class="alert alert-success">{{ session('success') }}</div>
                                 @endif
 
                                 @if($errors->any())
