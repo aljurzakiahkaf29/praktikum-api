@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FakultasController;
 use App\Http\Controllers\ProdiController;
@@ -48,3 +49,6 @@ Route::get('/profile', function () {
 Route::get('/data', function () {
     return view('data');
 });
+
+Route::get('/register', [AuthController::class,'formRegister'])->name('register');
+Route::post('/post-register', [AuthController::class,'post'])->name('post');
